@@ -21,6 +21,13 @@ const projects = [
     link: "https://nextjs-producer-portfolio.vercel.app/",
     github: "",
   },
+  {
+    title: "Mr Hat Webasite",
+    description:
+      "Landing page sencilla para la banda Mr Hat, integrando la API de notion como base de datos para fechas",
+    link: "https://mr-hat-website.vercel.app/",
+    github: "https://github.com/f3l1p/mr-hat-website",
+  },
 ];
 
 const Page: FC = () => {
