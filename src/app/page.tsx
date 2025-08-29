@@ -2,20 +2,24 @@
 import { FC } from "react";
 
 const projects = [
-  // {
-  //   title: "Dashboard de Finanzas",
-  //   description: "Aplicación web en Next.js + TypeScript para gestionar gastos y visualizarlos en gráficas interactivas.",
-  //   link: "https://github.com/tuusuario/dashboard-finanzas",
-  // },
-  // {
-  //   title: "Blog Fullstack",
-  //   description: "Blog con autenticación, panel de admin y base de datos en PostgreSQL (Next.js + Prisma).",
-  //   link: "https://github.com/tuusuario/blog-fullstack",
-  // },
   {
-    title: "Portfolio Musical",
-    description: "Página de presentación para proyectos musicales, con reproductor integrado y diseño responsive.",
+    title: "With Love 4 You",
+    description: `Applicacion personal para mi pareja de tipo "Quotes machine"`,
+    link: "https://wl4y-d4258.web.app/",
+    github: "",
+  },
+  {
+    title: "Spotglow Land",
+    description: `Pagina de presentacion de la banda "Spotglow" para su disco omonimo.`,
+    link: "https://the-spotglow-land.web.app/",
+    github: "",
+  },
+  {
+    title: "Portafolio Produccion Musical",
+    description:
+      "Página de presentación para proyectos musicales, con reproductor integrado y diseño responsive.",
     link: "https://nextjs-producer-portfolio.vercel.app/",
+    github: "",
   },
 ];
 
@@ -58,8 +62,18 @@ const Page: FC = () => {
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:underline"
               >
-                Ver en GitHub →
+                Live Demo →
               </a>
+              {project.github != "" && (
+                <a
+                  href={project?.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline"
+                >
+                  Ver en GitHub →
+                </a>
+              )}
             </div>
           ))}
         </div>
@@ -71,7 +85,7 @@ const Page: FC = () => {
         <p>
           📧{" "}
           <a
-            href="mailto:felipe.chicangana.dev@gmail.com"
+            href={`mailto:${process.env.EMAIL}`}
             className="text-blue-600 hover:underline"
           >
             felipe.chicangana.dev@gmail.com
@@ -80,7 +94,7 @@ const Page: FC = () => {
         <p>
           🔗{" "}
           <a
-            href="https://www.linkedin.com/in/felipechicangana/"
+            href={process.env.LINKEDIN}
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
@@ -91,7 +105,7 @@ const Page: FC = () => {
         <p>
           💻{" "}
           <a
-            href="https://github.com/f3l1p"
+            href={process.env.GITHUB}
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
