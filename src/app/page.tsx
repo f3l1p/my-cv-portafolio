@@ -4,8 +4,8 @@ import { FC } from "react";
 const projects = [
   {
     title: "With Love 4 You",
-    description: `Applicacion personal para mi pareja de tipo "Quotes machine"`,
-    link: "https://wl4y-d4258.web.app/",
+    description: `Applicacion personal para mi pareja de tipo "Quotes machine", usando firebase, redux y un pequeño auth de parte del front.`,
+    link: "https://wl4y-mauve.vercel.app/",
     github: "",
   },
   {
